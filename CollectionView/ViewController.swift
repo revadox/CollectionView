@@ -15,7 +15,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     var gridLayout: GridLayout = GridLayout(numberOfColumns: 3)
 
     
-    var imageArray = ["1","2","3","4","5","6","7","8","9","10","3","4","5","6","7","8","9","10","3","4","5","6","7","8","9","10"]
+ var imageArray = ["1","2","3","4","5","6","7","8","9","10","3","4","5","6","7","8","9","10","3","4","5","6","7","8","9","10"]
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
     }
@@ -28,19 +28,29 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("item selected \(indexPath.row)")
+        
+         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
+        let detVC = mainStoryboard.instantiateViewController(withIdentifier: "ShowImage") as! ShowImage
+        detVC.image = UIImage(named:imageArray[indexPath.row])!
+        self.navigationController?.pushViewController(detVC, animated: true)
+        
+        
     }
     
-    
+
+  
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         myCollectionView.collectionViewLayout = gridLayout
         myCollectionView.reloadData()
+       // navigationItem.title = "Image"
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+   
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         gridLayout.invalidateLayout()

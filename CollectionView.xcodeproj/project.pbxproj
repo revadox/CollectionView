@@ -16,6 +16,7 @@
 		7D46E7AA1FFF457000CD10F6 /* CollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46E7A91FFF457000CD10F6 /* CollectionViewUITests.swift */; };
 		7D46E7B81FFF477E00CD10F6 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46E7B71FFF477E00CD10F6 /* myCell.swift */; };
 		7D46E7BA1FFF5D5200CD10F6 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46E7B91FFF5D5200CD10F6 /* GridLayout.swift */; };
+		7D46E7C01FFF8FB700CD10F6 /* ShowImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46E7BF1FFF8FB700CD10F6 /* ShowImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7D46E7AB1FFF457000CD10F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D46E7B71FFF477E00CD10F6 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
 		7D46E7B91FFF5D5200CD10F6 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		7D46E7BF1FFF8FB700CD10F6 /* ShowImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7D46E7891FFF456F00CD10F6 /* AppDelegate.swift */,
+				7D46E7BF1FFF8FB700CD10F6 /* ShowImage.swift */,
 				7D46E78B1FFF456F00CD10F6 /* ViewController.swift */,
 				7D46E7B91FFF5D5200CD10F6 /* GridLayout.swift */,
 				7D46E7B71FFF477E00CD10F6 /* myCell.swift */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D46E78C1FFF456F00CD10F6 /* ViewController.swift in Sources */,
+				7D46E7C01FFF8FB700CD10F6 /* ShowImage.swift in Sources */,
 				7D46E7B81FFF477E00CD10F6 /* myCell.swift in Sources */,
 				7D46E78A1FFF456F00CD10F6 /* AppDelegate.swift in Sources */,
 				7D46E7BA1FFF5D5200CD10F6 /* GridLayout.swift in Sources */,
