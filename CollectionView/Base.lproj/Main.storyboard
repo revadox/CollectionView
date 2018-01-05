@@ -83,19 +83,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="waO-3d-tFo">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hi9-p0-wej">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="waO-3d-tFo">
+                                        <rect key="frame" x="0.0" y="55" width="375" height="557"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nKQ-h5-lDs" appends="YES" id="Eyu-4p-vnW"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="waO-3d-tFo" firstAttribute="top" secondItem="hi9-p0-wej" secondAttribute="top" constant="55" id="8Ea-5i-x1x"/>
+                                    <constraint firstItem="waO-3d-tFo" firstAttribute="centerY" secondItem="hi9-p0-wej" secondAttribute="centerY" id="Svi-On-u1B"/>
+                                    <constraint firstItem="waO-3d-tFo" firstAttribute="leading" secondItem="hi9-p0-wej" secondAttribute="leading" id="gId-3D-0tN"/>
+                                    <constraint firstAttribute="bottom" secondItem="waO-3d-tFo" secondAttribute="bottom" constant="55" id="p8q-Ue-8Cf"/>
+                                    <constraint firstAttribute="trailing" secondItem="waO-3d-tFo" secondAttribute="trailing" id="ybY-8n-2dc"/>
+                                    <constraint firstItem="waO-3d-tFo" firstAttribute="centerX" secondItem="hi9-p0-wej" secondAttribute="centerX" id="z9J-Eu-F96"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="yXT-Mt-HMg" id="UM3-HZ-nIV"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hi9-p0-wej" firstAttribute="leading" secondItem="TCW-3t-lVh" secondAttribute="leading" id="0U5-c9-2Rb"/>
+                            <constraint firstItem="hi9-p0-wej" firstAttribute="bottom" secondItem="40L-pQ-iO9" secondAttribute="bottom" id="Fmy-xS-hv6"/>
+                            <constraint firstAttribute="trailing" secondItem="hi9-p0-wej" secondAttribute="trailing" id="Ke4-Bs-BWm"/>
+                            <constraint firstItem="hi9-p0-wej" firstAttribute="top" secondItem="TCW-3t-lVh" secondAttribute="top" id="f7n-l0-iiQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="40L-pQ-iO9"/>
                     </view>
                     <connections>
-                        <outlet property="showImage" destination="waO-3d-tFo" id="43p-Re-uO3"/>
+                        <outlet property="imageScrollView" destination="hi9-p0-wej" id="gSM-Yp-19k"/>
+                        <outlet property="showImage" destination="waO-3d-tFo" id="5wn-OW-Vo0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNh-4X-MQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="nKQ-h5-lDs">
+                    <connections>
+                        <action selector="zoomImage:" destination="yXT-Mt-HMg" id="f1C-qp-jOb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1288.8" y="98.50074962518741"/>
         </scene>
